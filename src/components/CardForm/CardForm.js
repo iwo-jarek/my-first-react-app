@@ -8,18 +8,16 @@ const CardForm = props => {
   
   const handleSubmit = e => {
     e.preventDefault();
-    props.action({ title: title });
+    props.action({ title: title }, props.columnId);
     setTitle('');
     ;
   };
 
   return (
-    <div className={styles.cardForm}>
-      <form onSubmit={handleSubmit}>
+      <form className={styles.cardForm} onSubmit={handleSubmit}>
         <TextInput value={title} onChange={e => setTitle(e.target.value)} />
-        <Button>Add column</Button>
+        <Button>Add card</Button>
       </form>
-    </div>
   );
 };
 

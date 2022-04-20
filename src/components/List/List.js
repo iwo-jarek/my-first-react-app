@@ -4,6 +4,7 @@ import { useState } from 'react';
 import shortid from 'shortid';
 import ColumnForm from './../ColumnForm/ColumnForm';
 
+
 const List = () => {
   const [columns, setColumns] = useState([
     {
@@ -58,11 +59,11 @@ const List = () => {
       </header>
       <p className={styles.description}>Interesting things I want to check out</p>
       <section className={styles.columns}>
-        {columns.map(column => <Column key={column.id} id={column.id} title={column.title} icon={column.icon} cards={column.cards} />)}
+        {columns.map(column => <Column key={column.id} id={column.id} title={column.title} icon={column.icon} cards={column.cards} action={addCard} />)}
       </section>
       
       <ColumnForm action={addColumn} />
-
+      
     </div>
   );
 };
