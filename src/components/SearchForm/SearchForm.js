@@ -3,17 +3,18 @@ import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { searchStr } from '../../redux/store';
 
 const SearchForm = () => {
   const [searchString, setSearchString] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch({ type: 'UPDATE_SEARCHSTRING', payload: {searchString: searchString} });
+    dispatch(searchStr( {searchString: searchString} ));
     // props.action({ title: title }, props.columnId);
     setSearchString('');
   };
-  
+
   const dispatch = useDispatch();
 
   return (
