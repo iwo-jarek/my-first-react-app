@@ -10,8 +10,7 @@ const SearchForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(searchStr( {searchString: searchString} ));
-    // props.action({ title: title }, props.columnId);
+    dispatch(searchStr( {searchString} ));
     setSearchString('');
   };
 
