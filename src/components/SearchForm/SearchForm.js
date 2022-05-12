@@ -1,4 +1,4 @@
-import styles from './SearchForm.module.scss'
+import styles from './SearchForm.module.scss';
 import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button';
 import { useState } from 'react';
@@ -10,15 +10,15 @@ const SearchForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(searchStr( {searchString} ));
-    setSearchString(searchString);
+    dispatch(searchStr({ searchString }));
+    setSearchString();
   };
 
   const dispatch = useDispatch();
 
   return (
     <form className={styles.searchForm} onSubmit={handleSubmit}>
-      <TextInput placeholder="Search..." value={searchString}  onChange={e => setSearchString(e.target.value)} />
+      <TextInput placeholder="Search..." value={searchString} onChange={e => setSearchString(e.target.value)} />
       <Button>
         <span className="fa fa-search" />
       </Button>
