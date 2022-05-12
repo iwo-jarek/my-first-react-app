@@ -5,23 +5,21 @@
   justify-content: space-between;
   background-color: darken($color-dark, 3%);
   font-size: 24px;
+  padding: 0 20px;
+ 
+}
 
+.icon {
+  font-size: 28px;
+}
 
-  .navigation {
-    display: flex;
-    
+li {
+  display: inline;
+  padding: 0 8px;
+}
 
-
-    li {
-      display: inline;
-
-    }
-
-    a {
-      text-decoration: none;
-      color: floralwhite;
-      font-size: 20px;
-      
-    }
-  }
+a {
+  text-decoration: none;
+  color: floralwhite;
+  font-size: 15px;
 }
