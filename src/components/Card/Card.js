@@ -12,10 +12,11 @@ const Card = props => {
   
   const dispatch = useDispatch();
 
+  const star = props.isFavorite ? 'fa fa-star' : 'fa fa-star-o';
   return (
     <li className={styles.card}>{props.title}
-      <button onClick={handleSubmit} className={clsx(styles.button, styles.isFavorite)}>
-        <span className={'fa fa-star-o'} />
+      <button onClick={handleSubmit} className={clsx(styles.button, props.isFavorite, styles.isFavorite)}>
+        <span className={'fa fa-star-o' + star } />
       </button>
     </li>
   );
