@@ -10,6 +10,7 @@ const Card = props => {
     dispatch(toggleCardFavorite(props.id));
   };
   
+  
   const dispatch = useDispatch();
 
   const star = props.isFavorite ? 'fa fa-star' : 'fa fa-star-o';
