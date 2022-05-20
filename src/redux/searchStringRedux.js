@@ -1,0 +1,18 @@
+//actions
+const createActionName = actionName => `app/searcch/${actionName}`;
+const UPDATE_SEARCHSTRING = createActionName('UPDATE_SEARCHSTRING');
+
+//action creators
+export const searchStr = payload => ({ type: UPDATE_SEARCHSTRING, payload });
+
+
+const searchStringReducer = (statePart = '', action) => {
+  switch (action.type) {
+    case UPDATE_SEARCHSTRING:
+      return action.payload
+    default:
+      return statePart;
+  }
+}
+
+export default searchStringReducer;
