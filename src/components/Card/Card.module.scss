@@ -8,29 +8,22 @@
   margin: 0 0 $base-size 0;
   border-radius: $radius;
   display: flex;
-  justify-content:space-between;
   font-weight: bold;
+}
+.title {
+  flex: 1;
 }
 
 .button {
-  display: flex;
-  justify-content: flex-end;
   color: gold;
-  
-  line-height: 1.3;
   background: transparent;
   border: none;
   cursor: pointer;
-  text-align: center;
-
+  justify-self: flex-end;
 }
 
 .remove {
-  display: flex;
   color: black;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
   
   &:hover {
     color: darken($color-success, 10%);

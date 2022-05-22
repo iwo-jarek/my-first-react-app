@@ -15,17 +15,17 @@ const Card = props => {
     e.preventDefault();
     dispatch(removeCard(props.id));
   }
-  
-  
   const dispatch = useDispatch();
+  
+  const favoriteClassName = props.isFavorite ? 'fa fa-star' : 'fa fa-star-o';
 
-  const star = props.isFavorite ? 'fa fa-star' : 'fa fa-star-o';
   return (
-    <li className={styles.card}>{props.title}
-      <button onClick={favoriteCard} className={clsx(styles.button, props.isFavorite, styles.isFavorite)}>
-        <span className={'fa fa-star-o' + star } />
+    <li className={styles.card}>
+      <div className={styles.title}>{props.title}</div>
+      <button onClick={favoriteCard} className={styles.button}>
+        <span className={favoriteClassName} />
       </button>
-      <button onClick={remove} className={styles.remove}>
+      <button onClick={remove} className={ clsx(styles.remove, styles.button) }>
         <span className='fa fa-trash' />
       </button>
     </li>

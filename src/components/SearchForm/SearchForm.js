@@ -7,13 +7,11 @@ import { searchStr } from '../../redux/searchStringRedux';
 
 const SearchForm = () => {
   const [searchString, setSearchString] = useState();
-
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(searchStr({ searchString }));
-    setSearchString();
+    dispatch(searchStr( searchString ));
   };
-
+  
   const dispatch = useDispatch();
 
   return (

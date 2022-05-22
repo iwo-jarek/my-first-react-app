@@ -1,5 +1,5 @@
-const strContains = (StrOne, StrTwo) => {
-    if(StrOne.toLowerCase().includes(StrTwo.toLowerCase()))
+const strContains = (strOne, strTwo) => {
+    if(strOne.toLowerCase().includes(strTwo.toLowerCase()))
     return true
     else
     return false;
