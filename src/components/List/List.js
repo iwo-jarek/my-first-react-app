@@ -5,7 +5,6 @@ import { useParams } from 'react-router';
 import { useSelector } from 'react-redux';
 import { getColumnsByList } from '../../redux/columnsRedux';
 import { getListById } from '../../redux/listsRedux';
-
 import { Navigate } from 'react-router-dom';
 import SearchForm from '../SearchForm/SearchForm';
 
